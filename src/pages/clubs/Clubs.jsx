@@ -36,13 +36,15 @@ const Clubs = () => {
 
       <div className="clubs_header">
         <div className="clubs_search_parent">
+          <label htmlFor="search-clubs">{t("search")}</label>
           <input
             type="text"
-            name=""
-            id=""
+            name="search-clubs"
+            id="search-clubs"
             placeholder={t("type_to_begin_search")}
+            aria-label={t("search_clubs")}
           />
-          <button>
+          <button aria-label={t("filter_clubs")}>
             {t("filters")} <CiFilter />
           </button>
         </div>
@@ -52,12 +54,13 @@ const Clubs = () => {
           onClickfunction={() => {
             navigate("/dashboard");
           }}
+          aria-label={t("go_to_dashboard")}
         >
           {t("your_dashboard")} <PiCaretLeftBold />
         </Button>
       </div>
 
-      <div className="clubs_parent">
+      <div className="clubs_parent" aria-live="polite">
         {!clubs || clubs?.length === 0 ? (
           <Loading />
         ) : (
