@@ -72,7 +72,7 @@ const Profile = () => {
           <div className="profile_header">
             <img
               src="https://api.freelogodesign.org/assets/thumb/logo/bdd55f703a074abb8bf50c0d3891c0a9_400.png?t=638314396148720000"
-              alt=""
+              alt={`${details?.name} logo`}
             />
 
             <div className="profile_header_details">

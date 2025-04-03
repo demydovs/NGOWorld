@@ -8,7 +8,7 @@ const ComingSoon = ({ launchitem }) => {
 
   return (
     <div className="comingsoon_parent">
-      <img src={ComingSoonLogo} alt="" />
+      <img src={ComingSoonLogo} alt="coming soon" />
       <h1>{t("launching_soon")}</h1>
       <p>
         {t("we_will_let_you_know")}{" "}

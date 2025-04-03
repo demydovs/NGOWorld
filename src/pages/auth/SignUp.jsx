@@ -195,7 +195,7 @@ const SignUp = () => {
                 </label>
               </div>
             </div>
-            <img src={rightabstract} alt="" />
+            <img src={rightabstract} alt="colorful auth banner" />
           </div>
         </div>
       </div>

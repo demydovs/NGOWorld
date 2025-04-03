@@ -21,7 +21,7 @@ const Footer = () => {
     <footer>
       <div className="leftside">
         <div className="brand">
-          <img src={brand} alt="" />
+          <img src={brand} alt="brand logo" />
         </div>
 
         <div className="links_parent">

@@ -79,13 +79,13 @@ const CreateEvents = ({ setshowCreateModal }) => {
         </div>
 
         <div className="createevent_form">
-          <img src={event.coverImage} alt="" />
+          <img src={event.coverImage} alt="event image" />
 
           <div className="form_header">
             <div className="host">
               <img
                 src="https://www.thetechies.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser3.04b79840.webp&w=640&q=75"
-                alt=""
+                alt="host logo"
               />
 
               <div className="details">
@@ -336,7 +336,7 @@ const CreateEvents = ({ setshowCreateModal }) => {
                         <MenuItem value={platform.label} key={index}>
                           <img
                             src={platform.icon}
-                            alt=""
+                            alt="platform icon"
                             style={{
                               width: "20px",
                               height: "20px",

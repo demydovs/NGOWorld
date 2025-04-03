@@ -289,7 +289,7 @@ const CreateEvent = ({ setShowCreateModal }) => {
                   <img
                     loading="lazy"
                     src="https://ismailvtl-images-project.vercel.app/life-saver-img.svg"
-                    alt=""
+                    alt="life saver"
                   />
                   <div className="plan-details">
                     <span>Online</span>
@@ -313,7 +313,7 @@ const CreateEvent = ({ setShowCreateModal }) => {
                   <img
                     loading="lazy"
                     src="https://ismailvtl-images-project.vercel.app/potted-plant-img.svg"
-                    alt=""
+                    alt="potted plant"
                   />
                   <div className="plan-details">
                     <span>Offline</span>

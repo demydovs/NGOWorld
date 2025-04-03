@@ -64,7 +64,7 @@ const UserProfile = () => {
                 userdetails?.profilepicture ||
                 "https://images.ctfassets.net/lzny33ho1g45/RdyJrgaCvIKpSB5EUmwNq/319552e88aac20cb8bdffbe307cc9d92/reddit-app-tips-00-hero.png"
               }
-              alt=""
+              alt="profile picture"
             />
           </div>
 
@@ -146,7 +146,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -162,7 +162,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -178,7 +178,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -194,7 +194,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -210,7 +210,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -226,7 +226,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -256,7 +256,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -272,7 +272,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -288,7 +288,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -304,7 +304,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -320,7 +320,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -336,7 +336,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -352,7 +352,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
@@ -368,7 +368,7 @@ const UserProfile = () => {
                 <div className="clubdetails_eventcard">
                   <img
                     src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/11/data-analysis-ngo.jpg"
-                    alt=""
+                    alt="people're showing out signs of the donation company"
                   />
 
                   <div className="clubdetails_eventcard_body">
