@@ -68,22 +68,33 @@ const Landing = () => {
 
             <div className="landing_ctaimgdiv">
               <div className="landing_ctaimages">
-                <img
-                  src="https://avatars.githubusercontent.com/u/56752104?v=4"
-                  alt=""
-                />
-                <img
-                  src="https://avatars.githubusercontent.com/u/71691473?v=4"
-                  alt=""
-                />
-                <img
-                  src="https://avatars.githubusercontent.com/u/94097778?v=4"
-                  alt=""
-                />
-                <img
-                  src="https://avatars.githubusercontent.com/u/72697074?v=4"
-                  alt=""
-                />
+                <ul>
+                  <li>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/56752104?v=4"
+                      alt="avatar"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/71691473?v=4"
+                      alt="avatar"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/94097778?v=4"
+                      alt="avatar"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/72697074?v=4"
+                      alt="avatar"
+                    />
+                  </li>
+                </ul>
+
               </div>
               <span>{t("trusted_by_users", { count: USERS_AMOUNT })}</span>
             </div>

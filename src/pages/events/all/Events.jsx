@@ -35,13 +35,17 @@ const Events = () => {
 
       <div className="events_header">
         <div className="events_search_parent">
+          <label htmlFor="search-events">{t("search")}</label>
           <input
             type="text"
-            name=""
-            id=""
+            name="search-events"
+            id="search-events"
             placeholder={t("type_to_begin_search")}
+            aria-label={t("type_to_begin_search")}
           />
-          <button>
+          <button
+            aria-label={t("filter_events")}
+          >
             {t("filters")} <CiFilter />
           </button>
         </div>
@@ -51,6 +55,7 @@ const Events = () => {
           onClickfunction={() => {
             setShowCreateModal(true);
           }}
+          aria-label={t("create_new_event")}
         >
           <FaPlus /> {t("create_event")}
         </Button>
@@ -60,7 +65,7 @@ const Events = () => {
 
       <hr className="events_separator" />
 
-      <div className="events_parent">
+      <div className="events_parent" aria-live="polite">
         {!events || events?.length === 0 ? (
           <Loading />
         ) : (
@@ -69,7 +74,13 @@ const Events = () => {
       </div>
 
       {showCreateModal && (
-        <CreateEvent setShowCreateModal={setShowCreateModal} />
+        <div
+          role="dialog"
+          aria-labelledby="create-event-modal"
+          aria-hidden={!showCreateModal}
+        >
+          <CreateEvent setShowCreateModal={setShowCreateModal} />
+        </div>
       )}
 
       <Footer />

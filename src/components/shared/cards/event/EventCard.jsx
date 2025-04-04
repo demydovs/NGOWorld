@@ -27,20 +27,26 @@ const EventCard = () => {
 
       <div className="eventcard_ctadiv">
         <div className="cta_membersdiv">
-          <div className="cta_members">
-            <img
-              src="https://avatars.githubusercontent.com/u/72851613?v=4"
-              alt=""
-            />
-            <img
-              src="https://avatars.githubusercontent.com/u/72851613?v=4"
-              alt=""
-            />
-            <img
-              src="https://avatars.githubusercontent.com/u/72851613?v=4"
-              alt=""
-            />
-          </div>
+          <ul className="cta_members">
+            <li>
+              <img
+                src="https://avatars.githubusercontent.com/u/72851613?v=4"
+                alt="avatar"
+              />
+            </li>
+            <li>
+              <img
+                src="https://avatars.githubusercontent.com/u/72851613?v=4"
+                alt="avatar"
+              />
+            </li>
+            <li>
+              <img
+                src="https://avatars.githubusercontent.com/u/72851613?v=4"
+                alt="avatar"
+              />
+            </li>
+          </ul>
           <p>+300 {t("participated")}</p>
         </div>
 

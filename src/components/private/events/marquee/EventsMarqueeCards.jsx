@@ -16,7 +16,7 @@ const EventsMarqueeCards = ({ event }) => {
   return (
     <>
       <div className="eventmarque_parent">
-        <img src={event?.coverImage} alt="" />
+        <img src={event?.coverImage} alt="event cover image" />
 
         <div className="eventmarque_details">
           <h1 className="eventmarque_name">{event?.name}</h1>
@@ -37,7 +37,7 @@ const EventsMarqueeCards = ({ event }) => {
                           ? "https://img.icons8.com/color/48/000000/microsoft-teams.png"
                           : "https://img.icons8.com/color/48/000000/other.png"
                   }
-                  alt=""
+                  alt={`contact via ${event?.platform}`}
                   style={{
                     position: "relative",
                     top: "1px",
@@ -52,11 +52,11 @@ const EventsMarqueeCards = ({ event }) => {
               {window?.innerWidth > 500
                 ? formattedStartDate + " from " + formattedStartTime
                 : formattedStartDate.split(" ")[0] +
-                  " " +
-                  formattedStartDate.split(" ")[1].substring(0, 3) +
-                  "," +
-                  " " +
-                  formattedStartTime}
+                " " +
+                formattedStartDate.split(" ")[1].substring(0, 3) +
+                "," +
+                " " +
+                formattedStartTime}
             </span>
           </div>
         </div>

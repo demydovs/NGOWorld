@@ -86,28 +86,31 @@ const Navbar = () => {
     <nav>
       <div className="navbar_parent">
 
-        <Link className="navbar_brand" to={"/"}>
-          <img src={navbarbrand} alt="Milan-logo" className="nav_brand_img" />
+        <Link className="navbar_brand" to={"/"} aria-label={t('go_to_home')}>
+          <img src={navbarbrand} alt="Milan logo" className="nav_brand_img" />
         </Link>
 
         {windowWidth > 900 && (
           <div className="navbar_links_parent">
             <div className="navbar_links">
-              {links.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <Link key={index} className="navbar_link" to={item.link}>
-                      {item.name}
-                    </Link>
-                    <div
-                      className={
-                        "" +
-                        (location.pathname === item?.link ? "active-link" : "")
-                      }
-                    ></div>
-                  </div>
-                );
-              })}
+              {links.map((item, index) => (
+                <div key={index}>
+                  <Link
+                    key={index}
+                    className="navbar_link"
+                    to={item.link}
+                    aria-label={t(`go_to_${item.name.toLowerCase()}`)}
+                  >
+                    {item.name}
+                  </Link>
+                  <div
+                    className={
+                      location.pathname === item?.link ? "active-link" : ""
+                    }
+                    aria-hidden="true"
+                  />
+                </div>
+              ))}
             </div>
             {Cookies.get("Token") && isLoggedIn ? (
               <p
@@ -117,6 +120,8 @@ const Navbar = () => {
                     .classList.toggle("nav_dropdown_visible");
                 }}
                 className="navbar_dropdown_name"
+                aria-expanded={isNavbarOpen ? "true" : "false"}
+                aria-label={t("profile_dropdown")}
               >
                 {t("profile")} <RxCaretDown />
               </p>
@@ -128,59 +133,63 @@ const Navbar = () => {
 
           </div>
         )}
-        {!isNavbarOpen &&
-          (Cookies.get("Token") ? (
-            <img
-              src={user?.profileImage || profileImage}
-              alt=""
-              className="navbar_hamimg"
-              onClick={() => {
-                toggleNavbar();
-              }}
-            />
-          ) : (
-            <GiHamburgerMenu
-              className="navbar_ham"
-              onClick={() => {
-                toggleNavbar();
-              }}
-            />
-          ))}
+
+        {!isNavbarOpen && (
+          <>
+            {Cookies.get("Token") ? (
+              <img
+                src={user?.profileImage || profileImage}
+                alt={`Profile of ${user?.userName}`}
+                className="navbar_hamimg"
+                onClick={() => toggleNavbar()}
+                aria-label={t("open_menu")}
+              />
+            ) : (
+              <GiHamburgerMenu
+                className="navbar_ham"
+                onClick={() => toggleNavbar()}
+                aria-label={t("open_menu")}
+              />
+            )}
+          </>
+        )}
 
         {isNavbarOpen && (
           <div className="navbar_mobile_linksparent">
             <div className="navbar_mobile_links">
               <RxCross2
                 className="navbar_mobile_close"
-                onClick={() => {
-                  toggleNavbar();
-                }}
+                onClick={() => toggleNavbar()}
+                aria-label={t("close_menu")}
               />
 
-              {links.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <Link
-                      key={index}
-                      className="navbar_mobile_link"
-                      to={item.link}
-                    >
-                      {item.name}
-                    </Link>
-                    <div
-                      className={
-                        "" +
-                        (location.pathname === item?.link ? "active-link" : "")
-                      }
-                    ></div>
-                  </div>
-                );
-              })}
+              {links.map((item, index) => (
+                <div key={index}>
+                  <Link
+                    key={index}
+                    className="navbar_mobile_link"
+                    to={item.link}
+                    aria-label={t(`go_to_${item.name.toLowerCase()}`)}
+                  >
+                    {item.name}
+                  </Link>
+                  <div
+                    className={
+                      location.pathname === item?.link ? "active-link" : ""
+                    }
+                    aria-hidden="true"
+                  />
+                </div>
+              ))}
 
               {isLoggedIn ? (
                 <>
                   <div>
-                    <Link className="navbar_mobile_link" to={"/dashboard"}>
+                    <Link
+                      className="navbar_mobile_link"
+                      to={"/dashboard"}
+                      aria-label={t("go_to_dashboard")}
+                    >
                       {user?.userType === "individual"
                         ? "Profile"
                         : "Dashboard"}
@@ -193,6 +202,7 @@ const Navbar = () => {
                         handleLogout();
                         setIsNavbarOpen(false);
                       }}
+                      aria-label={t("logout")}
                     >
                       {t("logout")}
                     </p>
@@ -200,7 +210,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <Button to={"/auth/signup"} className="navbar_mobile_cta">
-                  <span>Sign Up</span>
+                  <span>{t("sign_up")}</span>
                   <FaChevronRight />
                 </Button>
               )}
@@ -222,13 +232,16 @@ const Navbar = () => {
                   ? `/user/${user?.userName}`
                   : `/dashboard`
               }
+              aria-label={t("go_to_dashboard")}
             >
               {user?.userType === "individual" ? "Your Profile" : "Dashboard"}
             </Link>
-            {user?.userType === "club" ? (
-              <Link to={"/event/create"}>{t("your_events")}</Link>
-            ) : null}
-            <Link>{t("settings")}</Link>
+            {user?.userType === "club" && (
+              <Link to={"/event/create"} aria-label={t("your_events")}>
+                {t("your_events")}
+              </Link>
+            )}
+            <Link aria-label={t("settings")}>{t("settings")}</Link>
           </div>
           <div className="myaccount">
             <div
@@ -236,21 +249,21 @@ const Navbar = () => {
               aria-orientation="horizontal"
               className="myaccount_separator"
             ></div>
-            <Link>{t("support")}</Link>
+            <Link aria-label={t("support")}>{t("support")}</Link>
             <Link
-              onClick={() => {
-                handleLogout();
-              }}
+              onClick={() => handleLogout()}
+              aria-label={t("logout")}
             >
               {t("logout")}
             </Link>
           </div>
         </div>
+
         <div style={{ whiteSpace: 'nowrap' }}>
           {i18n.language === "fr" ? (
-            <Link to="?lang=en" hrefLang="en">Switch to English</Link>
+            <Link to="?lang=en" hrefLang="en" aria-label={t("switch_to_english")}>Switch to English</Link>
           ) : (
-            <Link to="?lang=fr" hrefLang="fr">Switch to French</Link>
+            <Link to="?lang=fr" hrefLang="fr" aria-label={t("switch_to_french")}>Switch to French</Link>
           )}
         </div>
       </div>
